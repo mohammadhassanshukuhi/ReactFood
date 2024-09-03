@@ -1,5 +1,6 @@
 import { useEffect } from "react";
 import { useState } from "react";
+import MealIteam from "./MealIteam";
 
 const url = "http://localhost:3000/meals";
 
@@ -23,7 +24,7 @@ export default function Meals() {
   return (
     <ul id="meals">
       {LoadedMeals.map((meal) => (
-        <li key={meal.id}>{meal.name}</li>
+        <MealIteam key={meal.id} meal={meal}/>
       ))}
     </ul>
   );
