@@ -1,9 +1,13 @@
+import clsx from "clsx";
+
 export default function Button({ children, textOnly, className, ...props }) {
-  let cssClasses = textOnly ? "text-button" : "button";
-  cssClasses += " " + className;
+  const cls = clsx(
+    { ["text-button"]: textOnly, ["button"]: !textOnly },
+    className
+  );
 
   return (
-    <button className={cssClasses} {...props}>
+    <button className={cls} {...props}>
       {children}
     </button>
   );
