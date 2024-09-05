@@ -1,5 +1,6 @@
 import Header from "./components/Header";
 import Meals from "./components/Meals";
+import Modal from "./components/UI/Modal";
 import { CartContextProvider } from "./store/CartContext";
 
 function App() {
@@ -8,6 +9,7 @@ function App() {
       <CartContextProvider>
         <Header />
         <Meals />
+        <Modal />
       </CartContextProvider>
     </>
   );

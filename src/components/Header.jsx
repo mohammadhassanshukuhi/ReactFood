@@ -6,7 +6,7 @@ import CartContext from "../store/CartContext";
 export default function Header() {
   const { items } = useContext(CartContext);
 
-  const totalItems = items.reduce((totalNumberOfItems, item) => {
+  const totalCartItems = items.reduce((totalNumberOfItems, item) => {
     return totalNumberOfItems + item.quantity;
   }, 0);
   return (
@@ -16,7 +16,7 @@ export default function Header() {
         <h1>ReactFood</h1>
       </div>
       <nav>
-        <Button textOnly>Cart ({totalItems})</Button>
+        <Button textOnly>Cart ({totalCartItems})</Button>
       </nav>
     </header>
   );
