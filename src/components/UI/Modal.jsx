@@ -10,7 +10,7 @@ export default function Modal({ childern, open, className }) {
     }
   }, [open]);
   return createPortal(
-    <dialog className={`modal ${className}`}>{childern} </dialog>,
+    <dialog ref={dialog} className={`modal ${className}`}>{childern} </dialog>,
     document.getElementById("modal")
   );
 }
